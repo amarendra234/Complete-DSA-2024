@@ -1,0 +1,17 @@
+class Solution {
+  public:
+    vector<int> removeDuplicate(vector<int>& arr) {
+        // code here
+        unordered_map<int,int>umap;
+        vector<int>ans;
+        for(int i=0;i<arr.size();i++){
+            if(umap.find(arr[i])==umap.end()){
+                ans.push_back(arr[i]);
+            }
+            umap[arr[i]]++;
+        }
+        
+        
+        return ans;
+    }
+};
